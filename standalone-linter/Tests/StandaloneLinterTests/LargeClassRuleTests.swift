@@ -1,6 +1,6 @@
 import SwiftSyntax
 import SwiftParser
-@testable import SwiftLintSwiftSyntaxExample
+@testable import StandaloneLinter
 
 final class LargeClassRuleTests {
     

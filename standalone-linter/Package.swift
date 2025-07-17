@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftLintSwiftSyntaxExample",
+    name: "StandaloneLinter",
     platforms: [
         .macOS(.v12),
         .iOS(.v13),
@@ -14,12 +14,12 @@ let package = Package(
     ],
     products: [
         .executable(
-            name: "SwiftLintAnalyzer",
-            targets: ["SwiftLintAnalyzer"]
+            name: "StandaloneLintAnalyzer",
+            targets: ["StandaloneLintAnalyzer"]
         ),
         .library(
-            name: "SwiftLintSwiftSyntaxExample",
-            targets: ["SwiftLintSwiftSyntaxExample"]
+            name: "StandaloneLinter",
+            targets: ["StandaloneLinter"]
         ),
     ],
     dependencies: [
@@ -27,24 +27,24 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "SwiftLintSwiftSyntaxExample",
+            name: "StandaloneLinter",
             dependencies: [
                 .product(name: "SwiftSyntax", package: "swift-syntax"),
                 .product(name: "SwiftParser", package: "swift-syntax"),
             ]
         ),
         .executableTarget(
-            name: "SwiftLintAnalyzer",
+            name: "StandaloneLintAnalyzer",
             dependencies: [
-                "SwiftLintSwiftSyntaxExample",
+                "StandaloneLinter",
                 .product(name: "SwiftSyntax", package: "swift-syntax"),
                 .product(name: "SwiftParser", package: "swift-syntax"),
             ]
         ),
         .testTarget(
-            name: "SwiftLintSwiftSyntaxExampleTests",
+            name: "StandaloneLinterTests",
             dependencies: [
-                "SwiftLintSwiftSyntaxExample",
+                "StandaloneLinter",
                 .product(name: "SwiftSyntax", package: "swift-syntax"),
                 .product(name: "SwiftParser", package: "swift-syntax"),
             ]

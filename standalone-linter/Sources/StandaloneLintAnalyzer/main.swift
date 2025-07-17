@@ -1,14 +1,14 @@
 import Foundation
 import SwiftSyntax
 import SwiftParser
-import SwiftLintSwiftSyntaxExample
+import StandaloneLinter
 
-struct SwiftLintAnalyzer {
+struct StandaloneLintAnalyzer {
     static func main() {
         let arguments = CommandLine.arguments
         
         guard arguments.count > 1 else {
-            print("Usage: SwiftLintAnalyzer <file.swift>")
+            print("Usage: StandaloneLintAnalyzer <file.swift>")
             exit(1)
         }
         
@@ -42,4 +42,4 @@ struct SwiftLintAnalyzer {
     }
 }
 
-SwiftLintAnalyzer.main()
+StandaloneLintAnalyzer.main()

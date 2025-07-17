@@ -1,10 +1,26 @@
-# SwiftLint Swift Syntax Example
+# Standalone Linter Package
 
-This project demonstrates how to create custom linting rules using Swift Syntax. It includes examples of:
+This package demonstrates **Use Case 1**: Building a complete linting framework from scratch using Swift Syntax, without dependencies on external linting frameworks.
 
-- **Large Class Rule**: Detects classes that exceed a specified line count threshold
-- **Too Many Parameters Rule**: Identifies functions with excessive parameter counts
-- **Rule Engine**: A framework for running multiple lint rules on Swift source code
+## Features
+
+- **Custom Rule Framework**: Independent `LintRule` protocol and `RuleEngine`
+- **Swift Syntax Integration**: Uses Swift Syntax 600.0.0 for AST parsing  
+- **Command-line Tool**: `StandaloneLintAnalyzer` executable
+- **Configurable Rules**: Customizable thresholds for all rules
+- **No External Dependencies**: Only depends on Swift Syntax
+
+## Rules Included
+
+### Large Class Rule
+- **Purpose**: Detects classes exceeding line count thresholds
+- **Default Threshold**: 200 lines
+- **Configuration**: `LargeClassRule(maxLines: 150)`
+
+### Too Many Parameters Rule  
+- **Purpose**: Identifies functions with excessive parameters
+- **Default Threshold**: 5 parameters
+- **Configuration**: `TooManyParametersRule(maxParameters: 3)`
 
 ## Features
 
