@@ -2,6 +2,9 @@
 
 This repository demonstrates **two different approaches** to creating custom linting rules using Apple's Swift Syntax library.
 
+> [!WARNING]
+> This repository is still under active development and drafting stage, use it with caution.
+
 ## Projects
 
 ### 1. standalone-linter
