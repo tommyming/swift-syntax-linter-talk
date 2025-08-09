@@ -2,6 +2,9 @@ import SwiftSyntax
 // import SwiftLintCore
 // import SwiftLintFramework
 
+// Using mock SwiftLint infrastructure for demonstration
+// In production, replace this with real SwiftLint imports
+
 /// Registry of all custom SwiftLint rules using Swift Syntax
 public final class SwiftSyntaxRuleRegistry {
     

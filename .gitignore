@@ -98,3 +98,5 @@ iOSInjectionProject/
 # Temporary files
 *.tmp
 *.temp
+
+.vscode

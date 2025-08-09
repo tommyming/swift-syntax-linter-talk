@@ -2,6 +2,9 @@ import SwiftSyntax
 // import SwiftLintCore
 // import SwiftLintFramework
 
+// Using mock SwiftLint infrastructure for demonstration
+// In production, replace this with real SwiftLint imports
+
 /// SwiftLint rule that detects classes with too many lines using Swift Syntax
 public struct SwiftSyntaxLargeClassRule: SwiftSyntaxRule, ConfigurationProviderRule {
     public var configuration = Configuration()
