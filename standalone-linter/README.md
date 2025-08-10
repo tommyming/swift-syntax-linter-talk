@@ -13,21 +13,16 @@ This package demonstrates **Use Case 1**: Building a complete linting framework 
 ## Rules Included
 
 ### Large Class Rule
+
 - **Purpose**: Detects classes exceeding line count thresholds
 - **Default Threshold**: 200 lines
 - **Configuration**: `LargeClassRule(maxLines: 150)`
 
-### Too Many Parameters Rule  
+### Too Many Parameters Rule
+
 - **Purpose**: Identifies functions with excessive parameters
 - **Default Threshold**: 5 parameters
 - **Configuration**: `TooManyParametersRule(maxParameters: 3)`
-
-## Features
-
-- Built with Swift Syntax for accurate AST parsing
-- Extensible rule system
-- Command-line analyzer tool
-- Comprehensive test suite
 
 ## Usage
 
@@ -44,10 +39,10 @@ swift build
 swift build
 
 # Run the analyzer on a Swift file
-./.build/debug/SwiftLintAnalyzer <path-to-swift-file>
+./.build/debug/StandaloneLintAnalyzer <path-to-swift-file>
 
 # Example: Analyze the included example code
-./.build/debug/SwiftLintAnalyzer ExampleCode.swift
+./.build/debug/StandaloneLintAnalyzer ExampleCode.swift
 ```
 
 ### Running Tests
@@ -58,8 +53,8 @@ swift test
 
 ## Project Structure
 
-- `Sources/SwiftLintSwiftSyntaxExample/` - Core linting rules and engine
-- `Sources/SwiftLintAnalyzer/` - Command-line analyzer tool
+- `Sources/StandaloneLinter/` - Core linting rules and engine
+- `Sources/StandaloneLintAnalyzer/` - Command-line analyzer tool
 - `Tests/` - Unit tests for the linting rules
 - `ExampleCode.swift` - Sample Swift code to test rules against
 
@@ -90,18 +85,6 @@ When running the analyzer on the included `ExampleCode.swift`, you'll see output
 [Too_Many_Parameters] Initializer has 7 parameters, exceeding the maximum of 5
   at ExampleCode.swift:97:5
 ```
-
-## Rule Configuration
-
-### Large Class Rule
-
-- **Default threshold**: 200 lines
-- **Configurable**: `LargeClassRule(maxLines: 150)` for custom threshold
-
-### Too Many Parameters Rule
-
-- **Default threshold**: 5 parameters
-- **Configurable**: `TooManyParametersRule(maxParameters: 3)` for custom threshold
 
 ## Troubleshooting
 
